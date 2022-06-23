@@ -1,0 +1,11 @@
+---
+ - name: "Test Ansible"
+   hosts: localhost
+   connection: local
+   tasks:
+     - name: "print a greeting"
+       debug:
+         msg: "Hello World"     
+
+
+
