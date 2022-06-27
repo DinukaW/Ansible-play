@@ -1,3 +1,9 @@
 ---
- -name: "Ansible Test2"
- 
+ - name: "Ansible Test2"
+   hosts: myEC2s
+   tasks: 
+    - name: Ping my test hosts
+      ansible.builtin.ping:
+    - name: Print message
+      ansible.builtin.debug:
+        msg: Hello world!
