@@ -1,4 +1,4 @@
-myEC2s:
+myEC2:
   hosts:
     vm01:
       ansible_host: 174.129.35.151
