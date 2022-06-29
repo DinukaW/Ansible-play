@@ -1,0 +1,12 @@
+---
+- name: Upgrade hosts remotely
+  hosts: myEC2
+  become: true
+  tasks:
+    - name: Updating hosts using apt
+      apt:
+        update_cache: yes
+        upgrade: dist
+    - name: Clean unwanted stuff
+      apt:
+        autoremove: yes
