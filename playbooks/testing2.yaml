@@ -1,0 +1,11 @@
+---
+- name: Getting Disk spaces
+  hosts: myEC2
+  #become: true
+  gather_facts: no
+  tasks:
+    - name: Disk Space
+      command: df -h
+      register: space
+    - debug:
+          var: space.stdout_lines
